@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraPadrao.MainPage">
+
+    <ScrollView>
+
+        <Grid
+            Padding="15"
+            RowSpacing="10"
+            ColumnSpacing="10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Frame
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="2"
+                BackgroundColor="White"
+                BorderColor="Black"
+                CornerRadius="5"
+                Padding="10"
+                HasShadow="False">
+                
+                <Label
+                    x:Name="lblResultado"
+                    Text="Resultado"
+                    VerticalOptions="Center"
+                    FontSize="Medium"
+                    TextColor="Black"
+                    HorizontalTextAlignment="End"/>
+            </Frame>
+
+            <Button
+                x:Name="btnPorcentagem"
+                Text="%"
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnOperatorClicked"/>
+
+            <Button
+                x:Name="btnCancelar"
+                Text="CE"
+                Grid.Row="2"
+                Grid.Column="1"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnClearEntryClicked"/>
+
+            <Button
+                x:Name="btnLimpar"
+                Text="C"
+                Grid.Row="2"
+                Grid.Column="2"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnClearClicked"/>
+
+            <Button
+                x:Name="btnVoltar"
+                Text="&lt;&lt;&lt;"
+                Grid.Row="2"
+                Grid.Column="3"
+                FontSize="Small"
+                BackgroundColor="Gray"
+                Clicked="OnBackspaceClicked"/>    
+
+            <Button
+                x:Name="btnDivPorX"
+                Text="1/X"
+                Grid.Row="3"
+                Grid.Column="0"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnOperatorClicked"/> 
+
+            <Button
+                x:Name="btnQuadrado"
+                Text="X²"
+                Grid.Row="3"
+                Grid.Column="1"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnOperatorClicked"/>  
+
+            <Button
+                x:Name="btnRaizQuad"
+                Text="Raiz²"
+                Grid.Row="3"
+                Grid.Column="2"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnOperatorClicked"/> 
+
+            <Button
+                x:Name="btnDivsao"
+                Text="/"
+                Grid.Row="3"
+                Grid.Column="3"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnOperatorClicked"/>   
+
+            <Button
+                x:Name="btn7"
+                Text="7"
+                Grid.Row="4"
+                Grid.Column="0"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/> 
+
+            <Button
+                x:Name="btn8"
+                Text="8"
+                Grid.Row="4"
+                Grid.Column="1"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/>
+
+            <Button
+                x:Name="btn9"
+                Text="9"
+                Grid.Row="4"
+                Grid.Column="2"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/>
+
+            <Button
+                x:Name="btnMult"
+                Text="X"
+                Grid.Row="4"
+                Grid.Column="3"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnOperatorClicked"/>
+
+            <Button
+                x:Name="btn4"
+                Text="4"
+                Grid.Row="5"
+                Grid.Column="0"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/>
+
+            <Button
+                x:Name="btn5"
+                Text="5"
+                Grid.Row="5"
+                Grid.Column="1"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/>
+
+            <Button
+                x:Name="btn6"
+                Text="6"
+                Grid.Row="5"
+                Grid.Column="2"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/>
+
+            <Button
+                x:Name="btnSub"
+                Text="-"
+                Grid.Row="5"
+                Grid.Column="3"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnOperatorClicked"/>
+
+            <Button
+                x:Name="btn1"
+                Text="1"
+                Grid.Row="6"
+                Grid.Column="0"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/>
+
+            <Button
+                x:Name="btn2"
+                Text="2"
+                Grid.Row="6"
+                Grid.Column="1"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/>
+
+            <Button
+                x:Name="btn3"
+                Text="3"
+                Grid.Row="6"
+                Grid.Column="2"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/>
+
+            <Button
+                x:Name="btnSoma"
+                Text="+"
+                Grid.Row="6"
+                Grid.Column="3"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnOperatorClicked"/>
+
+            <Button
+                x:Name="btnMaisMenos"
+                Text="+/-"
+                Grid.Row="7"
+                Grid.Column="0"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnOperatorClicked"/>
+
+            <Button
+                x:Name="btn0"
+                Text="0"
+                Grid.Row="7"
+                Grid.Column="1"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/>
+
+            <Button
+                x:Name="btnPonto"
+                Text="."
+                Grid.Row="7"
+                Grid.Column="2"
+                FontSize="Small"
+                BackgroundColor="DarkGrey"
+                Clicked="OnNumberClicked"/>
+
+            <Button
+                x:Name="btnIgual"
+                Text="="
+                Grid.Row="7"
+                Grid.Column="3"
+                FontSize="Small"
+                BackgroundColor="Grey"
+                Clicked="OnEqualClicked"/>
+
+        </Grid>
+        
+    </ScrollView>
+
+</ContentPage>
