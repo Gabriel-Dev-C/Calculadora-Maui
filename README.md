@@ -6,7 +6,7 @@ O foco do projeto é desenvolver um aplicativo que simule uma calculadora funcio
 
 
 <p align="center">
-<img src="./Resources/Images/capa-readme.png" alt="Protótipo do projeto.">
+<img src="./Resources/Images/capa_readme.png" alt="Protótipo do projeto.">
 </p>
 
 ## Meta
